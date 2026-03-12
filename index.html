@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruiz Covarrubias Miranda | Viajes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .carousel-item img {
+            height: 60vh;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">MRC Travel Group</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#destinos">Destinos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#reservas">Reservaciones</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="inicio">
+        <div id="carouselHero" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselHero" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carouselHero" data-bs-slide-to="1"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" class="d-block w-100" alt="Playa">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1 class="display-3 fw-bold">Descubre el Paraíso</h1>
+                        <p>Paquetes todo incluido a los mejores precios.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80" class="d-block w-100" alt="Montaña">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1 class="display-3 fw-bold">Aventura Sin Límites</h1>
+                        <p>Explora montañas y destinos exóticos.</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselHero" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselHero" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </section>
+
+    <section id="destinos" class="container py-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Nuestros Destinos Populares</h2>
+            <p class="text-muted">Información dinámica actualizada del país</p>
+        </div>
+        <div class="row g-4" id="contenedor-destinos">
+            </div>
+    </section>
+
+    <section id="reservas" class="bg-light py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="card p-4 shadow-sm border-0">
+                        <h3 class="text-center mb-4">Solicita tu Reserva</h3>
+                        <form id="reservaForm">
+                            <div class="mb-3">
+                                <label class="form-label">Nombre Completo</label>
+                                <input type="text" class="form-control" id="nombre" placeholder="Ej: Juan Pérez" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Destino de Interés</label>
+                                <select class="form-select" id="destinoSelect" required>
+                                    <option value="" selected disabled>Selecciona un lugar...</option>
+                                    <option value="cancun">Cancún, México</option>
+                                    <option value="cusco">Cusco, Perú</option>
+                                    <option value="paris">París, Francia</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Fecha tentativa</label>
+                                <input type="date" class="form-control" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100 py-2">Enviar Solicitud</button>
+                        </form>
+                        <div id="mensajeEnvio" class="alert alert-success mt-3 d-none text-center">
+                            ¡Gracias! Nos pondremos en contacto contigo pronto.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-4">
+        <p>© 2026 Ruiz Covarrubias Miranda - Plataforma de Viajes</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/funciones.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<div class="container my-5">
+    <h2>Reserva tu Próximo Viaje</h2>
+    <div class="row">
+        <div class="col-md-8">
+            <form id="formReserva" class="row g-3">
+                <div class="col-md-6">
+                    <label class="form-label">Nombre Completo</label>
+                    <input type="text" class="form-control" id="nombre" required>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Destino</label>
+                    <select class="form-select" id="destinoSelect">
+                        <option value="1">Cancún</option>
+                        <option value="2">Machu Picchu</option>
+                    </select>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-success">Confirmar Reserva</button>
+                </div>
+            </form>
+            <div id="mensajeExito" class="mt-3 alert alert-success d-none">
+                ¡Reserva procesada con éxito!
+            </div>
+        </div>
+    </div>
+</div>
